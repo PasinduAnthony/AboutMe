@@ -1,0 +1,14 @@
+
+.gallery{
+	margin: 10px 50px;	/*top & left*/
+}
+.gallery img{
+	transition: 1s;	/*B&W effect will be done within 1sec*/
+	padding: 15px;
+	width:278px;
+	filter:grayscale(100%);	/*By default the images will be B&W*/
+}
+.gallery img:hover{
+	filter:grayscale(0);	/*B&W filter will be deactivated when hover */
+	transform: scale(1.1);	/*Zooming effect*/
+}
