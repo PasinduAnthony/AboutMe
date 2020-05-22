@@ -1,0 +1,71 @@
+button{
+	position: absolute;
+	bottom: 120px;
+	left:50%;	/*it will locate in the middle of the page*/
+	box-shadow: 2px 2px 0px black; /*to add a drop shadow*/
+	/*transform:translate(-50% , -50%);*/
+}
+	
+
+button{
+	background:none; /*to make the background transparent */
+	color:#ccc; /*lightgrey colour*/
+	width:100px;
+	height:50px;
+	border:1px solid #338033; /*green colour boader*/
+	font-size:18px;
+	font-color:white;
+	border-radius:20px;
+	transition:.6s; /*light green transition stay upto 0.6s*/
+	overflow:hidden; /*transition will stay inside the button*/
+}
+button:focus{
+	outline:none; /*transition will stay*/
+}
+button:before{
+	content:''; /*button is epmty*/
+	display:block;
+	position:absolute; /*displays the content inside (text) */
+	background:rgba(255,255,255,.5); /*transition colour*/
+	width:60px;
+	height:100%;
+	left:0;
+	top:0;
+	opacity:.5s; /*the colour will stay until 0.5secs*/
+	filter:blur(30px); /*blur amount*/
+	transform: translateX(-130px) skewX(-15deg);/*A transformation is an effect that lets an element change shape, size and position.*/
+}
+button:after{
+	content:'';
+	display:block;
+	position:absolute;
+	background:(255,255,255,.2);
+	width:30px;
+	height:100%;
+	top:0;
+	opacity: 0;/*after hover transparency wont stay*/
+	filter:blur(30px);
+	transform: translate(-100px) scaleX(-15deg);
+}
+button:hover{ /*on hover the green colour will apera*/
+	background:#338033;
+	cursor:pointer;
+}
+button:hover:before{
+	transform:translateX(300px) skewX(-15deg);
+	opacity:.6;
+	transition:.7s; 
+}
+button:hover:after{
+	transform:translateX(300px) skewX(-15deg);
+	opacity:1;
+	transition:.7s; 
+}
+
+
+
+
+
+
+
+
